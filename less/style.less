@@ -1,0 +1,530 @@
+
+
+/* Font family */
+@font-face {
+  font-family: 'FuturaDemiC';
+  src: url('../fonts/FuturaDemiC.eot');
+  src: local('../fonts/Futura Demi Cyrillic'), local('FuturaDemiC'),
+  url('../fonts/FuturaDemiC.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaDemiC.woff') format('woff'),
+  url('../fonts/FuturaDemiC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Шрифты
+.roboto() {
+  font-family: 'Roboto', sans-serif;
+}
+.opensans() {
+  font-family: 'Open Sans', sans-serif;
+}
+.futura() {
+  font-family: 'FuturaDemiC', sans-serif;
+}
+// Позиции
+.inline-block-middle () {
+  display: inline-block;
+  vertical-align: middle;
+}
+.inline-block-top () {
+  display: inline-block;
+  vertical-align: top;
+}
+.inline-block-bottom () {
+  display: inline-block;
+  vertical-align: bottom;
+}
+// Базовые цвета
+@bg-dark: #000;
+@bg-light: #fff;
+@bg-color: #1b1b1b;
+
+/* Базовые установки */
+* {	
+  padding: 0px;
+  margin: 0px;
+  // border: 1px solid red;
+}
+
+body {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  .roboto();
+  box-sizing: border-box;
+}
+a:hover {
+  text-decoration: none;
+}
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+// Шапка сайта
+.header {
+  width: 100%;  
+  height: 100%;
+  background: #000 url('../img/photo/Layer11.png') no-repeat center;
+  background-size: cover;
+  font-size: 0;
+  .navbar-item {
+    display: block;
+    padding-top: 32px;
+    text-align: right;
+    .navbar-left {
+      display: inline-block;
+      vertical-align: middle;
+      float: left;      
+      .mobile-menu{
+        display: inline-block;         
+        cursor: pointer; 
+        float: left;      
+        .text-menu{
+          display: inline-block; 
+          position: absolute;
+          top: 11px;
+          left: 60px;                
+          font-size: 16px;
+          color: @bg-light;
+          font-weight: 300;
+          text-transform: uppercase;
+        }
+      }
+      li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 18px;
+      }
+      li:last-child {
+        margin-right: 0px;
+      }
+      a {
+        .roboto;
+        color: @bg-light;
+        font-size: 16px;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #19979f;
+      }
+    }    
+    .phone-right {
+      display: inline-block;
+      vertical-align: middle;
+      color: @bg-light;
+      .futura;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  .header-logo {
+    display: block;
+    text-align: center;
+    margin-top: 88px;
+    .img2{
+      display: none;
+    }
+  }
+  .header-main-text {
+    text-align: center;
+    font-size: 49px;
+    color: @bg-light;
+    text-transform: uppercase;
+    margin-top: 90px;
+    .light {
+      font-weight: lighter;
+    }
+    .medium {
+      font-weight: medium;
+      display: block;
+    }
+  }
+  .service {
+    padding-top: 100px;
+    padding-bottom: 210px;
+    display: block;
+    text-align: center;
+    .for {
+      color: #eef8fc;
+      font-size: 14px;
+      margin-right: 140px;
+      text-transform: uppercase;
+    }
+    .for:last-child {
+      margin-right: 0px;
+    }
+    .items::before {
+      content: '';
+      width: 12px;
+      height: 1px;
+      background-color: #fff;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+}
+// Секция направлений
+.directions {
+  position: relative;
+  width: 100%;
+  background: @bg-light;
+  margin-bottom: 105px;
+  font-size: 0;
+  .direction-item {
+    display: block;
+    text-align: left;
+    .direction-left {
+      display: inline-block;
+      margin-top: 50px;
+      .left {
+        display: block;
+        text-align: left;
+        color: @bg-dark;
+        font-size: 31px;
+        font-weight: lighter;
+        text-transform: uppercase;
+        border: 3px solid @bg-dark;
+        padding: 165px 24px 24px 24px;
+        .left-item {
+          display: inline-block;
+          font-weight: 500;
+        }
+      }
+    }
+    .direction-right {
+      display: inline-block;
+      position: absolute;
+      margin-left: 120px;
+      margin-top: 107px;
+      color: @bg-dark;
+      text-transform: uppercase;
+      h2 {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 230px;
+      }
+      h1 {
+        font-size: 56px;
+        font-weight: 300;
+      }
+      .direction-header {
+        font-weight: 500;
+      }
+    }
+  }
+  .direction-bottom {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    padding-top: 80px;
+    .bottom-item {
+      display: inline-block;            
+      vertical-align: middle;
+      margin-right: 60px;
+      text-align: left;
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 30px;
+      }
+      h1 {
+        display: inline-block;
+        vertical-align: middle;
+        color: @bg-dark;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      p {
+        color: @bg-dark;
+        font-size: 16px;
+        font-weight: 300;
+        margin-top: 30px;
+      }
+    }
+    .bottom-item:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+// Секция статистики
+.statistic {
+  padding-top: 55px;
+  padding-bottom: 60px;
+  background: @bg-dark;
+  color: @bg-light;
+  font-size: 0;
+  .statistic-header {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    line-height: 55px;
+    margin-right: 220px;
+    h1 {
+      font-size: 34px;
+      font-weight: 300;
+      text-transform: uppercase;
+      .date {
+        font-weight: 500;
+      }
+    }
+  }
+  .statistic-item {
+    display: inline-block;
+    vertical-align: middle;
+    .futura;
+    .item1 {
+      display: inline-block;
+      font-size: 80px;
+      margin-right: 80px;
+      .item-text {
+        font-size: 16px;
+      }
+      .more {
+        font-size: 14px;
+        text-align: left;
+      }
+    }
+    .item1:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+// Наши кленты
+.clients {
+  display: block;
+  text-align: left;
+  background: @bg-light;
+  color: @bg-dark;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-size: 0;
+  .client-left {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 34px;
+    text-transform: uppercase;
+    border: 3px solid #000;
+    padding: 224px 60px 30px 22px;
+    margin-right: 100px;
+  }
+  .main-text {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 50px;
+  }
+}
+// Заявка
+.application {
+  background: @bg-dark;
+  color: @bg-light;
+  padding-top: 36px;
+  padding-bottom: 33px;
+  font-size: 0;
+  .question {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 24px;
+    line-height: 17px;
+    font-weight: 300;
+    margin-right: 140px;
+  }
+  .phone {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 24px;
+    .futura;
+    margin-right: 99px;
+  }
+  .button {
+    display: inline-block;
+    vertical-align: middle;
+    .futura;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    padding: 20px 35px;
+    cursor: pointer;
+  }
+}
+// Фотоблок
+.photo-nav {
+  display: block;
+  background: @bg-light;
+  padding-top: 100px;
+  font-size: 0;
+  h1 {
+    display: block;
+    text-align: left;
+    color: @bg-dark;
+    font-size: 34px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 55px;
+  }
+  .photo-item {
+    display: block;
+    margin-bottom: 50px;
+    margin-left: -10px;
+    img {
+      display: inline-block;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      width: 227px;
+    }
+  }
+  .btn {
+    display: block;
+    text-align: center;
+    .button {
+      display: inline-block;
+      .futura;
+      font-size: 12px;
+      text-transform: uppercase;
+      border: 2px solid #000;
+      padding: 20px 32px;
+      cursor: pointer;
+      margin: 0 auto;
+      margin-bottom: 100px;
+    }
+  }
+}
+// Футер
+.footer {
+  display: block;  
+  background: @bg-dark;
+  color: @bg-light;
+  font-size: 0;
+  text-align: left;
+  padding-top: 45px;
+  padding-bottom: 20px;
+  .main-text {
+    display: inline-block;
+    margin-right: 145px;
+    margin-bottom: 85px;
+    h1 {
+      font-size: 34px;
+      font-weight: 300;
+      text-align: left;
+      text-transform: uppercase;
+    }
+  }
+  .main-info {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    text-align: left;
+    h2 {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+    p {
+      .futura;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .info-item {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .item2 {
+      margin-left: 70px;
+      margin-right: 55px;
+    }
+  }
+  .copyright {
+    display: inline-block;
+    font-size: 0;
+    margin-right: 240px;
+    .copyright-item {
+      font-size: 12px;
+      font-weight: 300;
+      .opensans;
+      display: inline-block;
+    }
+  }
+  .social {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    .vk {
+      margin-right: 85px;
+    }
+
+    .vk,
+    .insta {
+      display: inline-block;
+      vertical-align: middle;
+      img {
+        margin-right: 10px;
+      }
+      a {
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 300;
+        color: @bg-light;
+        .opensans;
+      }
+    }
+  }
+}
+
+// Бургер меню
+.hamburger {
+  display: none;
+  position: relative;
+  margin-top: -10px;  
+  width: 40px;
+  height: 40px;
+  float: left;   
+  border: 1px solid #fff;
+  .item1{
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 24px; 
+    height: 1px;
+    left: 7px;
+    top: 13px;
+  }
+  .item2{
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 24px; 
+    height: 1px;
+    left: 7px;
+    top: 20px;
+  }
+  .item3{
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 24px; 
+    height: 1px;
+    left: 7px;
+    top: 27px;
+  }  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@import "flexbox";
+
